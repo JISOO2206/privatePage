@@ -1,0 +1,16 @@
+body{
+    background-color: beige;
+}
+
+h1{
+    color: blue;
+    transition:color 2s ease-in-out ;
+}
+
+.active { /*이름은 얼마든지 다른 걸로 선언할 수 있다.*/
+    color: tomato;
+}
+
+.title-font{
+    font-family: Arial;
+}
