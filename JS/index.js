@@ -18,13 +18,37 @@ function handleMouseEnter() {
 }
 
 function handleTitleClick() {
-    const clickedClass = "active title-font";
-    if(h1.className === clickedClass){
-        h1.className = "";
+    const clickedClass = "active";
+    if(h1.classList.contains(clickedClass)){
+        h1.classList.remove(clickedClass);
     } else {
-        h1.className = clickedClass
+        h1.classList.add(clickedClass);
     }
     console.log(h1.className);
+    /*
+    * "className" or InstanceName를 '변수명'으로 명명한다.
+    *
+    * 기존 class를 유지하면서 새로운 class를 추가 하고 싶다면,
+    * class.add(변수명)를 사용하면 된다.
+    * => console.log(변수명)로 확인하면 기존 클래스명 + 추가 클래스명으로 출력된다.
+    *
+    * 추가한 class를 제거하고 싶다면
+    * 1. 먼저 추가한 class가 존재하는지 확인한다. 그게 => classList.contains(변수명)
+    * 2. 확인이 됐다면 지우는 방법은 add와 마찬가지로 classList.remove(변수명)으로 사용하면 추가한 변수명이 삭제된다.
+    *
+    */
 }
 
-h1.addEventListener("click", handleTitleClick);
+function handleContentClick(){
+    const clickedClass = "active";
+    h1.classList.toggle(clickedClass);
+    console.log(h1.className);
+    /*
+        handleTitleClick에서 html class를 추가하는 것과 지우는 것을 알아봤다.
+        하지만 것보다 더 간단한 방법은 toggle()를 이용하는 방법이다.
+        toggle()은 add()와 remove() 메서드를 한 번에 쓸 수 있는 합쳐진 개념이다.
+        코드는 간결할수록 좋다.
+     */
+}
+
+h1.addEventListener("click", handleContentClick);
