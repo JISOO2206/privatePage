@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>private Page</title>
+    <title>index</title>
 </head>
 <body>
-
-    <form class="login-form">
-        <input type="text" placeholder="What is your name?" required maxlength="5" />
-        <button>Login</button>
-    </form>
+<form class="login-form">
+    <input type="text" placeholder="What is your name?" required="" maxlength="5">
+    <button>Login</button>
     <!-- input의 유효성 검사를 활용하기 위해선 form 태그 안에 있어야 한다.-->
-    <!-- button태그의 기본값인 "submit"으로 그냥 두어야 제출이 되며 html에서 제공하는 유효성 알럿도 뜨게 된다.-->
+    <!-- button태그의 기본값인 "submit"으로 그냥 두어야 제출이 되며 html에서 제공하는 유효성 alert도 뜨게 된다.-->
     <!-- 요약 : JavaScript에서 구현하는 대신 할 수 있다면 HTML의 기본 속성을 최대한 이용하기 -->
-
+    <!-- form은 submit을 하면 기본적으로 브라우저가 새로고침 됨. preventDefault를 추가함으로서 브라우저의 기본 동작을 막을 수 있음 -->
+</form>
+    <h1 id="greeting"></h1>
+    <a href="https://github.com/JISOO2206">JISOO'S GITHUB</a>
     <script src="JS/Login.js"></script>
 </body>
 </html>
