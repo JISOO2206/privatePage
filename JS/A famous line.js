@@ -1,11 +1,10 @@
 const famousLines = [
     {
-        line: "형, 전화 끝어요 지금부터 중요한 이야기 할 거니까.",
+        line: "하지마, 고백",
         title: "Semantic Error"
     },
     {
-        line: "머리론 형 보내줘야 된다는 건 아는데 그럼 이런 말 다 소용없는 거 아는데 " +
-            "그런 거 다 알면서도 좋아한다구요 형이... 좋아요 좋아해요",
+        line: "좋아하는 거 열심히 해보자, 우리",
         title: "Semantic Error"
     },
     {
@@ -30,12 +29,9 @@ const famousLines = [
     }
 ];
 
-const movieLine = document.querySelector('#famousLines span:first-child');
+const movieLineSpace = document.querySelector('#famousLines span:first-child');
 const movieAuthor = document.querySelector('#famousLines span:last-child');
+const todayFamousLine = famousLines [Math.floor(Math.random() * famousLines.length)];
 
-console.log(famousLines[7-1]);
-
-const  famousLines = famousLines [Math.floor(Math.random() * famousLines.length)];
-
-quote.innerText = famousLines.line;
-author.innerText = famousLines.author;
+movieLineSpace.innerText = todayFamousLine.line;
+movieAuthor.innerText = todayFamousLine.title;
